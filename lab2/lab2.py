@@ -23,7 +23,7 @@ def plt(csv,rows,queries=""):
         result = f"wielkości klas decyzyjnych: {class_count.to_dict()}"
         return query, df, result
 
-inputs = [gr.Textbox(label="CSV Text"), 
+inputs = [gr.Textbox(label="CSV File"), 
           gr.Number(label="Number of Rows"),
           gr.inputs.Dropdown(["ile klas decyzyjnych", "wielkość klasy decyzyjnej"], label="Pytanie")]
 outputs = [gr.outputs.Textbox(label="Wybrane pytanie"),
