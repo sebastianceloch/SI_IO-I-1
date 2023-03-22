@@ -1,0 +1,20 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats
+from sklearn.linear_model import LinearRegression
+
+#data = pd.DataFrame(data={"Rok": [2000, 2002, 2005, 2007, 2010], "Procent": [6.5, 7.0, 7.4, 8.2, 9.0]})
+x = np.array([2000, 2002, 2005, 2007, 2010])
+y = np.array([6.5, 7.0, 7.4, 8.2, 9.0])
+slope, intercept, r, p, std_err = stats.linregress(x, y)
+def calc(x):
+  return slope * x + intercept
+mymodel = list(map(calc, x))
+year = (12-intercept) / slope
+print(f"Procent bezrobotnych przekroczy 12% w roku: {int(year)}")
+plt.scatter(x, y)
+plt.plot(x, mymodel)
+plt.show()
+
+https://drive.google.com/file/d/10pG_-_1ZEC3tIBoQ-t3Ror2DohKxM40g/view
