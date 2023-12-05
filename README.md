@@ -1,1 +1,2 @@
-# SI_IO-I-1
+# Sztuczna Inteligencja
+Laby ze sztucznej inteligencji
